@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "description": "Control de versiones con Git",
+  "author": "David Díaz <dgonzalez@suse.de>",
+  "contributors": [
+    "José Iván López González <jlopez@suse.com>a"
+  ],
+  "license": "CC0 1.0",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "npm run clean && npm run static && mdx-deck build deck.mdx",
+    "clean": "rm -rf dist/images",
+    "static": "mkdir -p dist/images && cp -R images dist/",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck"
+  },
+  "devDependencies": {
+    "@mdx-deck/export": "^2.3.2",
+    "mdx-deck": "^2.3.2"
+  }
+}
